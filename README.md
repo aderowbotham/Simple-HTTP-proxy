@@ -1,4 +1,10 @@
 Simple-HTTP-proxy
 =================
 
-Simple HTTP proxy (PHP5)
+Simple lightweight HTTP proxy (PHP5)
+
+Works over port 80
+
+Passes through HTTP headers.
+
+No caching built in.
