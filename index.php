@@ -16,6 +16,7 @@ define ('OPTIONS_TIMEOUT',5);
 define ('OPTIONS_MAXREDIRECTS',5);
 
 
+
 class Proxy {
 
 
@@ -31,8 +32,8 @@ class Proxy {
         $response = $this->_fetchRemote($remoteUri);
         $this->_renderOutput($response);
     }
-    
-    
+
+
     private function _getRemoteUri(){
         
         $uri = $_SERVER['REQUEST_URI'];
@@ -41,8 +42,8 @@ class Proxy {
         
         return REMOTE_SCV_HOST.'/'.$uri;
     }
-    
-    
+
+
     private function _fetchRemote($url){
 
         if (!extension_loaded('curl')) {
@@ -82,6 +83,7 @@ class Proxy {
 
     }
 
+
     private function _renderOutput($response){
 
         # render page
@@ -94,6 +96,8 @@ class Proxy {
 
         echo $response->body;
     }
+
+
 }
 
 
